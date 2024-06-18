@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 // load all environment variables in application
 dotenv.config();
-const url = process.env.DB_URL;
+const url = process.env.DB_URL || 4000;
 export const connectUsingMongoose = async () => {
     try {
         await mongoose.connect(url, {
