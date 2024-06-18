@@ -33,7 +33,7 @@ export default class PatientController {
         }
     }
 
-    async getAll(req, res, next) {
+    async getAll(req, res) {
         try {
             const reports = await this.patientRepository.getAllReports();
             res.status(200).send(reports);
